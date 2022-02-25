@@ -29,7 +29,7 @@ const convertMoney = () => {
     }
      
     if(currencySelect.value === '₿ Bitcoin'){
-        currencyValue.innerHTML =  (input / bitcoin).toFixed(5)
+        currencyValue.innerHTML =  ((input / bitcoin)/1000).toFixed(7)
     }
 
 }
