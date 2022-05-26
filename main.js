@@ -1,14 +1,22 @@
 const button = document.querySelector('button')
-const dolar = 5.01
-const euro = 5.73
-const bitcoin = 202.268
+
+
+
+
 const currencySelect = document.querySelector('#select-current')
 
-const convertMoney = () => {
+const convertMoney = async () => {
     const input = document.querySelector('#input-real').value
     const realValue = document.querySelector('#real-value')
     const currencyValue = document.querySelector('#currency-value')
+    
+    const data = await fetch(" https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
 
+    console.log(data)
+
+    const dolar = data.USDBRL.high
+    const euro = data.EURBRL.high
+    const bitcoin = data.BTCBRL.high
     realValue.innerHTML = new Intl.NumberFormat('pt-BR', {
         style: 'currency',
         currency: 'BRL',

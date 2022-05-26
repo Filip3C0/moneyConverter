@@ -12,12 +12,14 @@
 }
 body {
   background-color: #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 .container {
   width: 375px;
   background-color: #f5f5f5;
-  margin: 0 auto;
-  margin-top: 100px;
   border-radius: 5px;
 }
 header {
@@ -25,14 +27,16 @@ header {
   color: white;
   border-radius: 5px;
   height: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 h1 {
   font-size: 24px;
 
   line-height: 24px;
   color: #f4f4f4;
-  text-align: center;
-  padding-top: 25px;
 }
 main {
   padding: 24px;
@@ -92,24 +96,23 @@ button:active {
 }
 section {
   border: 2px solid #1b83e2;
-  width: 327px;
-  height: 276px;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 .currency-container {
   padding: 12px;
-  text-align: center;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.currency-name{
-    font-size: 14px;
-
+.currency-name {
+  font-size: 14px;
 }
 .currency {
   font-size: 20px;
   color: #1b83e2;
   font-weight: bold;
-}
-.arrow-image{
-    margin: 0 auto;
-    display: block;
 }
